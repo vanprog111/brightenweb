@@ -1,4 +1,59 @@
+@import '_fonts.scss';
 @import '_mixins';
 @import '_variables';
 @import '_desktop.scss';
 @import '_responsive';
+@import '_button.scss';
+
+body {
+  background-color: $black;
+}
+
+.header {
+  &__inner {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-title {
+  padding-top: 40px;
+  height: 750px;
+  display: flex;
+  padding-top: 20px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  //background: url('../img/mainback.png') center no-repeat;
+  background-size: cover;
+  &__title {
+    font-family: 'GUERRILLA';
+    font-size: 144px;
+    position: relative;
+    z-index: 10;
+    max-width: 1150px;
+    color: white;
+    margin-bottom: 100px;
+    line-height: 136.66px;
+    text-align: center;
+  }
+}
+
+.main-canvas {
+  margin-top: 40px;
+}
+
+.logo {
+  font-family: 'GUERRILLA';
+  font-size: 36px;
+  color: $blue;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

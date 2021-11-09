@@ -1,53 +1,35 @@
-/**
- * Инициализация функции маски для поля телефона
- * Документация: https://imask.js.org/guide.html
- */
-function initPhoneMask() {
-  $('input[type=tel]').each(function(index, element) {
-    var mask = IMask(element, {
-      mask: [
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '+7',
-          country: 'Russia',
-        },
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '7',
-          country: 'Russia',
-        },
-        {
-          mask: '0 (000) 000-00-00',
-          startsWith: '8',
-          country: 'Russia',
-        },
-        {
-          mask: '+7 (000) 000-00-00',
-          startsWith: '',
-          country: 'unknown',
-        },
-      ],
-      dispatch: function(appended, dynamicMasked) {
-        var number = (dynamicMasked.value + appended).replace(/\D/g, '');
-        return dynamicMasked.compiledMasks.find(function(m) {
-          return number.indexOf(m.startsWith) === 0;
-        });
-      },
-    });
-    $(this).blur(function() {
-      var maskValue = mask.unmaskedValue;
-      var startWith = 10;
-      if (maskValue.charAt(0) === '8') {
-        startWith = 11;
-      }
-      if (maskValue.length < startWith) {
-        mask.value = '';
-      }
-    });
-  });
-}
+const mainTitle = document.getElementsByClassName('main-title')[0];
+console.log(mainTitle);
+var width = mainTitle.clientWidth || document.body.clientWidth;
+var height = mainTitle.clientHeight || document.body.clientHeight;
+var optionsBackground, bsBackground;
 
-$(function() {
-  objectFitImages();
-  initPhoneMask();
-});
+optionsBackground = {
+  points: 10,
+  inkAmount: 10,
+  size: 300,
+  frames: 10,
+  frameAnimation: true,
+  splashing: false,
+  image: '../img/mainback.png',
+  centered: true,
+  queue: true,
+  padding: 11,
+  stretch: true,
+  overlap: 100,
+  frames: 100,
+  frameAnimation: true,
+  width: width,
+  height: height,
+};
+
+bsBackground = new Brushstroke(optionsBackground);
+
+//const mainTitle = document.getElementsByClassName('main-title')[0];
+
+const canvas = bsBackground.defaults.ctx.canvas;
+const ctx = bsBackground.defaults.ctx;
+console.log(ctx);
+mainTitle.append(canvas);
+
+bsBackground.draw();
