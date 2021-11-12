@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'GUERRILLA';
+  src: url('../fonts/GUERRILLA-Normal.eot');
+  src: local('GUERRILLA Normal'), local('GUERRILLA-Normal'),
+    url('../fonts/GUERRILLA-Normal.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GUERRILLA-Normal.woff2') format('woff2'),
+    url('../fonts/GUERRILLA-Normal.woff') format('woff'),
+    url('../fonts/GUERRILLA-Normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+  Переменные для отступов
+ */
+/**
+  Переменные для цветов
+ */
+/**
+  Переменные для шрифтов
+ */
+.container {
+  max-width: 1400px;
+}
+
+/**
+  Десктоп маленький
+ */
+/**
+  Планшет горизонтальный
+ */
+@media screen and (max-width: 1279px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/**
+  Планшет вертикальный
+ */
+/**
+  Мобильные устройства
+ */
+.button {
+  background-color: transparent;
+  background-size: cover;
+  padding: 10px 50px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+body {
+  background-color: #1c1c1c;
+}
+
+.header__inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-title {
+  padding-top: 40px;
+  height: 750px;
+  display: flex;
+  padding-top: 20px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+.main-title__title {
+  font-family: 'GUERRILLA';
+  font-size: 144px;
+  position: relative;
+  z-index: 10;
+  max-width: 1150px;
+  color: white;
+  margin-bottom: 100px;
+  line-height: 136.66px;
+  text-align: center;
+}
+
+.main-canvas {
+  margin-top: 40px;
+}
+
+.logo {
+  font-family: 'GUERRILLA';
+  font-size: 36px;
+  color: #5598be;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+.title-section {
+  position: relative;
+}
+.title-section:before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  z-index: 0;
+  width: 724px;
+  height: 60px;
+  background: no-repeat center;
+  background-size: cover;
+}
+.title-section h2 {
+  font-weight: 800;
+  font-size: 96px;
+  z-index: 10;
+  position: relative;
+  line-height: 117px;
+  text-transform: uppercase;
+  color: transparent;
+  z-index: 10;
+  -webkit-text-stroke: 2px white;
+  /* width and color */
+  color: transparent;
+}
+.title-section h2 span {
+  color: white;
+}
+
+.card {
+  min-height: 500px;
+  flex-grow: 1;
+  flex: 1;
+  background: no-repeat center;
+  flex-shrink: 1;
+  background-size: 100% 100%;
+  padding: 50px 70px 20px 70px;
+  color: white;
+  font-family: 'Montserrat';
+}
+.card__desc {
+  font-weight: 400;
+  font-size: 24px;
+}
+.card__title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+}
+
+.positive-block {
+  padding-top: 150px;
+}
+.positive-block__title {
+  margin-bottom: 100px;
+}
+.positive-block__title::before {
+  background-image: url('../img/back-positive.svg');
+}
+.positive-block__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.positive-block__card1 {
+  background-image: url('../img/card1.png');
+}
+.positive-block__card2 {
+  background-image: url('../img/card2.png');
+}
+.positive-block__card3 {
+  background-image: url('../img/4.png');
+}
+
+.questions {
+  padding: 260px 0px;
+}
+
+.question {
+  margin: 0 auto;
+  color: white;
+  max-width: 1300px;
+  background: url('../img/question-background.svg') center no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question__button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 90px;
+  background-color: #fec859;
+  border: none;
+  color: black;
+}
+.question h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 117px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
