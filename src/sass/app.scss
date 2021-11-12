@@ -91,11 +91,14 @@ body {
 }
 
 .card {
-  max-width: 436px;
-  height: 500px;
+  //max-width: 436px;
+  min-height: 500px;
+  flex-grow: 1;
+  flex: 1;
   background: no-repeat center;
-  background-size: contain;
-  padding: 100px 70px;
+  flex-shrink: 1;
+  background-size: 100% 100%;
+  padding: 50px 70px 20px 70px;
   color: white;
   font-family: 'Montserrat';
   &__desc {
@@ -104,7 +107,7 @@ body {
   }
 
   &__title {
-    margin-bottom: 60px;
+    //margin-bottom: 60px;
     font-weight: 700;
     text-align: center;
     font-size: 36px;
@@ -122,8 +125,48 @@ body {
   &__cards {
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
   }
-  &__card {
-    background-image: url('../img/card.png');
+  &__card1 {
+    background-image: url('../img/card1.png');
+  }
+  &__card2 {
+    background-image: url('../img/card2.png');
+  }
+  &__card3 {
+    background-image: url('../img/4.png');
+  }
+}
+
+.questions {
+  padding: 260px 0px;
+}
+
+.question {
+  margin: 0 auto;
+  color: white;
+  max-width: 1300px;
+  &__button {
+    margin: 0 auto;
+    display: block;
+    margin-top: 90px;
+    background-color: #fec859;
+    border: none;
+    color: black;
+  }
+  background: url('../img/question-background.svg') center no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 117px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
   }
 }

@@ -1,11 +1,13 @@
 .button {
-  background: url('../img/backgroud-button.svg') no-repeat center;
+  //background: url('../img/backgroud-button.svg') no-repeat center;
   background-color: transparent;
   background-size: cover;
-  width: 376px;
+  padding: 10px 50px;
   outline: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
-  height: 68px;
-  border: none;
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid white;
 }
